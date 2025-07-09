@@ -43,7 +43,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
 export default function App() {
   return (
-    <div className="root">
+    <div className="root bg-background">
       <Outlet />
     </div>
   );

@@ -13,15 +13,39 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/browse": {
+    params: {};
+  };
+  "/browse/genre/:id": {
+    params: {
+      "id": string;
+    };
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
+    page: "/" | "/browse" | "/browse/genre/:id";
+  };
+  "routes/layouts/RootLayout.tsx": {
+    id: "routes/layouts/RootLayout";
+    page: "/" | "/browse" | "/browse/genre/:id";
+  };
+  "routes/pages/Login.tsx": {
+    id: "routes/pages/Login";
     page: "/";
   };
-  "routes/Login.tsx": {
-    id: "routes/Login";
-    page: "/";
+  "routes/layouts/AuthLayout.tsx": {
+    id: "routes/layouts/AuthLayout";
+    page: "/browse" | "/browse/genre/:id";
+  };
+  "routes/pages/Browse.tsx": {
+    id: "routes/pages/Browse";
+    page: "/browse" | "/browse/genre/:id";
+  };
+  "routes/pages/Genre.tsx": {
+    id: "routes/pages/Genre";
+    page: "/browse/genre/:id";
   };
 };
