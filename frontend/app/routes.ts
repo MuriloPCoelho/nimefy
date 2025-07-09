@@ -10,8 +10,8 @@ export default [
   layout("routes/layouts/RootLayout.tsx", [
     index("routes/pages/Login.tsx"),
     layout("routes/layouts/AuthLayout.tsx", [
-      route("browse", "routes/pages/Browse.tsx", [
-        route("genre/:id", "routes/pages/Genre.tsx"),
+      route("browse/:genre?", "routes/pages/Browse.tsx", [
+        // route("series/:id?", "routes/pages/Series.tsx"),
       ]),
     ]),
   ]),
