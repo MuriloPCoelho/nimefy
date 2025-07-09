@@ -13,12 +13,9 @@ type Pages = {
   "/": {
     params: {};
   };
-  "/browse": {
-    params: {};
-  };
-  "/browse/genre/:id": {
+  "/browse/:genre?": {
     params: {
-      "id": string;
+      "genre"?: string;
     };
   };
 };
@@ -26,11 +23,11 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/browse" | "/browse/genre/:id";
+    page: "/" | "/browse/:genre?";
   };
   "routes/layouts/RootLayout.tsx": {
     id: "routes/layouts/RootLayout";
-    page: "/" | "/browse" | "/browse/genre/:id";
+    page: "/" | "/browse/:genre?";
   };
   "routes/pages/Login.tsx": {
     id: "routes/pages/Login";
@@ -38,14 +35,10 @@ type RouteFiles = {
   };
   "routes/layouts/AuthLayout.tsx": {
     id: "routes/layouts/AuthLayout";
-    page: "/browse" | "/browse/genre/:id";
+    page: "/browse/:genre?";
   };
   "routes/pages/Browse.tsx": {
     id: "routes/pages/Browse";
-    page: "/browse" | "/browse/genre/:id";
-  };
-  "routes/pages/Genre.tsx": {
-    id: "routes/pages/Genre";
-    page: "/browse/genre/:id";
+    page: "/browse/:genre?";
   };
 };

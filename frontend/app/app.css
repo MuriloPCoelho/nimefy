@@ -14,4 +14,9 @@
   html, body {
     @apply bg-neutral-950 text-white
   }
+
+  a.active {
+    color: white !important;
+    font-weight: 600;
+  }
 }

@@ -16,51 +16,51 @@ const Header = () => {
   return (
     <header className={`${baseClass} ${isScrolled ? "bg-neutral-950" : ""}`}>
       <nav>
-        <ul className="flex items-center gap-4">
+        <ul className="flex items-center justify-end gap-4">
           <li>
             <NavLink
-              to="browse/genre/1"
-              className="text-gray-200 hover:text-gray-400 transition-colors active:text-white active:font-semibold"
+              to="browse/series"
+              className="text-gray-200 hover:text-gray-400 transition-colors"
             >
               Animes
             </NavLink>
           </li>
           <li>
             <NavLink
-              to=""
-              className="text-gray-200 hover:text-gray-400 transition-colors active:text-white active:font-semibold"
+              to="browse/movies"
+              className="text-gray-200 hover:text-gray-400 transition-colors"
             >
               Filmes
             </NavLink>
           </li>
           <li>
             <NavLink
-              to=""
-              className="text-gray-200 hover:text-gray-400 transition-colors active:text-white active:font-semibold"
+              to="browse/new"
+              className="text-gray-200 hover:text-gray-400 transition-colors"
             >
               Novos
             </NavLink>
           </li>
           <li>
             <NavLink
-              to=""
-              className="text-gray-200 hover:text-gray-400 transition-colors active:text-white active:font-semibold"
+              to="browse/popular"
+              className="text-gray-200 hover:text-gray-400 transition-colors"
             >
               Populares
             </NavLink>
           </li>
           <li>
             <NavLink
-              to=""
-              className="text-gray-200 hover:text-gray-400 transition-colors active:text-white active:font-semibold"
+              to="browse/my-list"
+              className="text-gray-200 hover:text-gray-400 transition-colors"
             >
               Minha Lista
             </NavLink>
           </li>
           <li>
             <NavLink
-              to=""
-              className="text-gray-200 hover:text-gray-400 transition-colors active:text-white active:font-semibold"
+              to="browse/categories"
+              className="text-gray-200 hover:text-gray-400 transition-colors"
             >
               Categorias
             </NavLink>
