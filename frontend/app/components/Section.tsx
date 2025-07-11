@@ -9,7 +9,7 @@ interface SectionProps {
 
 const Section = ({ title, linkTo, children }: SectionProps) => {
   return (
-    <section >
+    <section>
       <div>
         <h2>{title}</h2>
         {linkTo && (
@@ -21,7 +21,9 @@ const Section = ({ title, linkTo, children }: SectionProps) => {
           </Link>
         )}
       </div>
-      <div className="flex gap-2 overflow-auto px-[4%] xl:px-14">{children}</div>
+      <div className="flex gap-2 overflow-auto px-[4%] xl:px-14">
+        {children}
+      </div>
     </section>
   );
 };
