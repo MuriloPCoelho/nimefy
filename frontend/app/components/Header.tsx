@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router";
+import { useEffect, useState } from "react"
+import { NavLink } from "react-router"
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
   const baseClass =
-    "h-16 fixed top-0 left-0 right-0 bg-linear-to-b from-neutral-950 to-transparent flex items-center px-[2vw] transition-colors duration-500 z-50";
+    "h-16 fixed top-0 left-0 right-0 bg-linear-to-b from-neutral-950 to-transparent flex items-center px-[2vw] transition-colors duration-500 z-50"
 
   useEffect(() => {
-    setIsScrolled(window.scrollY > 0);
+    setIsScrolled(window.scrollY > 0)
     window.addEventListener("scroll", () => {
-      setIsScrolled(window.scrollY > 0);
-    });
-  }, []);
+      setIsScrolled(window.scrollY > 0)
+    })
+  }, [])
 
   return (
     <header className={`${baseClass} ${isScrolled ? "bg-neutral-950" : ""}`}>
@@ -68,7 +68,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

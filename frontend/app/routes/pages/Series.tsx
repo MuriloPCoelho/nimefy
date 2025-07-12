@@ -1,16 +1,11 @@
-import Hero from "~/components/Hero";
-import type { Route } from "./+types/Login";
+import Hero from "~/components/Hero"
 
-export async function loader({ params }: Route.LoaderArgs) {
-  return params.id;
-}
-
-const Genre = ({ params }: Route.ComponentProps) => {
+const Genre = () => {
   return (
     <>
       <Hero />
     </>
-  );
-};
+  )
+}
 
-export default Genre;
+export default Genre

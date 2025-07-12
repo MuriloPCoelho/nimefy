@@ -1,7 +1,7 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from "react"
 
 interface HeroProps {
-  children?: ReactNode;
+  children?: ReactNode
 }
 
 const Hero = ({ children }: HeroProps) => {
@@ -9,7 +9,7 @@ const Hero = ({ children }: HeroProps) => {
     <div className="mask-b-from-70% mask-b-to-100% bg-[url('/images/sky_of_radiance-x.png')] bg-cover bg-center h-[50vw]">
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -2,9 +2,8 @@ import {
   type RouteConfig,
   index,
   layout,
-  prefix,
   route,
-} from "@react-router/dev/routes";
+} from "@react-router/dev/routes"
 
 export default [
   layout("routes/layouts/RootLayout.tsx", [
@@ -15,4 +14,4 @@ export default [
       ]),
     ]),
   ]),
-] satisfies RouteConfig;
+] satisfies RouteConfig
