@@ -1,12 +1,12 @@
 // eslint.config.js
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
-import pluginImport from "eslint-plugin-import";
-import pluginPrettier from "eslint-plugin-prettier";
-import configPrettier from "eslint-config-prettier/flat";
-import { defineConfig } from "eslint/config";
+import js from "@eslint/js"
+import globals from "globals"
+import tseslint from "typescript-eslint"
+import pluginReact from "eslint-plugin-react"
+import pluginImport from "eslint-plugin-import"
+import pluginPrettier from "eslint-plugin-prettier"
+import configPrettier from "eslint-config-prettier/flat"
+import { defineConfig } from "eslint/config"
 
 export default defineConfig([
   {
@@ -67,8 +67,8 @@ export default defineConfig([
       "no-var": "error", // Proíbe o uso de var
       "no-empty-function": "error", // Proíbe funções vazias
       "@typescript-eslint/no-empty-function": "error", // Mesma regra acima, mas para TS
-      semi: ["error", "always"], // Exige ponto e vírgula no final das linhas
       quotes: ["error", "single"], // Exige aspas simples
+      semi: ["error", "never"], // Remove pontos e vírgulas
       "comma-dangle": ["error", "always-multiline"], // Exige vírgula no final de listas multilinha
       "object-curly-spacing": ["error", "always"], // Exige espaço dentro de chaves de objetos
       "arrow-parens": ["error", "always"], // Exige parênteses em arrow functions
@@ -96,7 +96,8 @@ export default defineConfig([
         "error",
         {
           endOfLine: "auto", // Garante que o final de linha seja consistente
-        }
+          semi: false, // Remove pontos e vírgulas
+        },
       ], // Integra o Prettier como regra de formatação
     },
     settings: {
@@ -107,4 +108,4 @@ export default defineConfig([
   },
 
   configPrettier,
-]);
+])

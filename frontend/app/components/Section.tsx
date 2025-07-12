@@ -1,10 +1,11 @@
-import type { ReactNode } from "react";
-import { Link } from "react-router";
+import type { ReactNode } from 'react'
+import { Link } from 'react-router'
+import { Carousel, CarouselContent } from './ui/carousel'
 
 interface SectionProps {
-  title: string;
-  children: ReactNode;
-  linkTo?: string;
+  title: string
+  children: ReactNode
+  linkTo?: string
 }
 
 const Section = ({ title, linkTo, children }: SectionProps) => {
@@ -21,11 +22,12 @@ const Section = ({ title, linkTo, children }: SectionProps) => {
           </Link>
         )}
       </div>
-      <div className="flex gap-2 overflow-auto px-[4%] xl:px-14">
-        {children}
-      </div>
-    </section>
-  );
-};
 
-export default Section;
+      <Carousel className="w-full pl-8" opts={{ axis: 'x', loop: true }}>
+        <CarouselContent className="-ml-4">{children}</CarouselContent>
+      </Carousel>
+    </section>
+  )
+}
+
+export default Section

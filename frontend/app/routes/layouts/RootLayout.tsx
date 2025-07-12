@@ -1,17 +1,17 @@
-import { Outlet } from "react-router";
-import Footer from "~/components/Footer";
-import Header from "~/components/Header";
+import { Outlet } from "react-router"
+import Footer from "~/components/Footer"
+import Header from "~/components/Header"
 
 const RootLayout = () => {
   return (
     <div>
       <Header />
-      <main className="min-w-full min-h-dvh">
+      <main className="min-w-full min-h-dvh pb-20">
         <Outlet />
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default RootLayout;
+export default RootLayout

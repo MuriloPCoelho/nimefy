@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="min-h-screen">
       <hr />
       Footer
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
